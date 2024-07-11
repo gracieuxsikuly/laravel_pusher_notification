@@ -16,6 +16,7 @@ new class extends Component
     }
 }; ?>
 
+
 <nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,8 +37,19 @@ new class extends Component
                 </div>
             </div>
 
-            <!-- Settings Dropdown -->
-            <div class="hidden sm:flex sm:items-center sm:ms-6">
+            <!-- Settings Dropdown and Notification Icon -->
+            <div class="hidden sm:flex sm:items-center sm:ms-6 space-x-4">
+                {{-- notification icon --}}
+                <div class="relative">
+                    <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
+                        <svg class="h-12 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405C18.5 15.215 18 14.11 18 13V9c0-3.278-2.067-6-5-6S8 5.722 8 9v4c0 1.11-.5 2.215-1.595 3.595L5 17h5m1 0v1a3 3 0 11-6 0v-1m6 0a3 3 0 11-6 0v-1" />
+                        </svg>
+                        <span class="absolute transform translate-x-1/2 -translate-y-1/2 top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">0</span>
+                    </button>
+                </div>
+                {{-- end notification --}}
+
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
@@ -108,3 +120,9 @@ new class extends Component
         </div>
     </div>
 </nav>
+
+
+
+
+
+
