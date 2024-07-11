@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
             $table->integer('from');
-            $table->tex('message');
+            $table->text('message');
             $table->tinyInteger('is_read')->default('0');
             $table->timestamps();
         });
